@@ -1,5 +1,9 @@
 const validateLineup = (lineup) => {
-
+  if (totalSalary(lineup)) {
+    return true
+  } else {
+    return false
+  }
 }
 
 const totalSalary = (lineup) => {
