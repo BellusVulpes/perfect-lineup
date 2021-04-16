@@ -1,6 +1,7 @@
 const validateLineup = (lineup) => {
+  let amount = []
   lineup.forEach(function(value) {
-    console.log(value.salary)
+    amount.push(value.salary)
   });
 }
 
