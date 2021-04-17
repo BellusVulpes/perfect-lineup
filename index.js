@@ -9,7 +9,10 @@ const validateLineup = (lineup) => {
 const numberOfPlayers = (lineup) => {
   let player = []
 
- 
+  lineup.forEach(function (value) {
+    player.push(value.position)
+  })
+
 }
 
 const totalSalary = (lineup) => {
