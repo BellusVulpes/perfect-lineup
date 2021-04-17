@@ -1,12 +1,12 @@
 const validateLineup = (lineup) => {
-  if (totalSalary(lineup) && numberOfPlayers(lineup) && playerTeam(lineup)) {
+  if (totalSalary(lineup) && numberOfPlayers(lineup) && playerPosition(lineup)) {
     return true
   } else {
     return false
   }
 }
 
-const playerTeam = (lineup) => {
+const playerPosition = (lineup) => {
 
 }
 
