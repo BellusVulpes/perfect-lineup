@@ -1,5 +1,5 @@
 const validateLineup = (lineup) => {
-  if (totalSalary(lineup)) {
+  if (totalSalary(lineup) || playerPosition(lineup)) {
     return true
   } else {
     return false
@@ -7,7 +7,11 @@ const validateLineup = (lineup) => {
 }
 
 const playerPosition = (lineup) => {
-  
+  let positionArray = []
+
+  lineup.forEach(function (job) {
+    positionArray.push(job.position)
+  })
 }
 
 const totalSalary = (lineup) => {
