@@ -13,6 +13,11 @@ const numberOfPlayers = (lineup) => {
     player.push(value.position)
   })
 
+  if (player.length === 9) {
+    return true
+  } else {
+    return false
+  }
 }
 
 const totalSalary = (lineup) => {
