@@ -7,7 +7,11 @@ const validateLineup = (lineup) => {
 }
 
 const playerPosition = (lineup) => {
+  let job = []
 
+  lineup.forEach(function (value) {
+    job.push(value.position)
+  })
 }
 
 const numberOfPlayers = (lineup) => {
