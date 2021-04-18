@@ -14,6 +14,10 @@ const game = (lineup) => {
   lineup.forEach(function (value) {
     game.push(value.gameId)
   })
+  const sortGame = game.sort((a, b) => a - b)
+
+  for (let i = 1; i < sortGame.length; i++) {
+    if (sortGame[i - 1] === sortGame[i]) {
 
 }
 
