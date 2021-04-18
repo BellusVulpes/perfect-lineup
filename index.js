@@ -30,6 +30,30 @@ const game = (lineup) => {
   }
 }
 
+const team = (lineup) => {
+  let team = []
+  let counter = 1
+  let maxCounter = 1
+
+  lineup.forEach(function (value) {
+    team.push(value.teamId)
+  })
+  const sortTeam = team.sort((a, b) => a - b)
+
+  for (let i = 1; i < sortTeam.length; i++) {
+    if (sortTeam[i - 1] === sortTeam[i]) {
+      if (++counter > maxCounter) maxCounter = counter
+    } else {
+      counter = 1
+    }
+  }
+  if (maxCounter > 2) {
+    return false
+  } else {
+    return true
+  }
+}
+
 const playerPosition = (lineup) => {
   let job = []
   let OF = []
