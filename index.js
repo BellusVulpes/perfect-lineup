@@ -8,10 +8,17 @@ const validateLineup = (lineup) => {
 
 const playerPosition = (lineup) => {
   let job = []
+  let OF = []
 
   lineup.forEach(function (value) {
     job.push(value.position)
   })
+  for (let i = 0; i < job.length; i++) {
+    if (job[i] === 'OF') {
+      OF.push(job[i])
+    }
+  }
+  console.log(OF)
 }
 
 const numberOfPlayers = (lineup) => {
