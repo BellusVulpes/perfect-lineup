@@ -18,7 +18,11 @@ const playerPosition = (lineup) => {
       OF.push(job[i])
     }
   }
-  console.log(OF)
+  if (OF.length === 3) {
+    return true
+  } else {
+    return false
+  }
 }
 
 const numberOfPlayers = (lineup) => {
