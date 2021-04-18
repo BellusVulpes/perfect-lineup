@@ -1,9 +1,15 @@
 const validateLineup = (lineup) => {
-  if (totalSalary(lineup) && numberOfPlayers(lineup) && playerPosition(lineup)) {
+  if (totalSalary(lineup) && numberOfPlayers(lineup) && playerPosition(lineup) && game(lineup) && team(lineup)) {
     return true
   } else {
     return false
   }
+}
+
+const game = (lineup) => {
+  let game = []
+  let counter = 1
+  let maxCounter = 1
 }
 
 const playerPosition = (lineup) => {

@@ -8,3 +8,28 @@ In the initial commit to this project, you have been provided with files that co
 2) Lineups may not contain more than 2 players from a single team
 3) Lineups may not contain more than 3 players from a single game
 4) Lineups must contain exactly 3 players with the position of 'OF' and must also contain exactly 1 player from each of the following positions: 'P', 'C', '1B', '2B', '3B', 'SS'
+
+
+const team = (lineup) => {
+  let team = []
+  let counter = 1
+  let maxCounter = 1
+
+  lineup.forEach(function (value) {
+    team.push(value.teamId)
+  })
+  const sortTeam = team.sort((a, b) => a - b)
+
+  for (let i = 1; i < sortTeam.length; i++) {
+    if (sortTeam[i - 1] === sortTeam[i]) {
+      if (++counter > maxCounter) maxCounter = counter
+    } else {
+      counter = 1
+    }
+  }
+  if (maxCounter > 2) {
+    return false
+  } else {
+    return true
+  }
+}
