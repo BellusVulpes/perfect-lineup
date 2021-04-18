@@ -56,45 +56,19 @@ const team = (lineup) => {
 
 const playerPosition = (lineup) => {
   let job = []
-  let OF = []
-  let P = []
-  let C = []
-  let oneB = []
-  let twoB = []
-  let threeB = []
-  let SS = []
-
+  let jobExample = ['P', 'C', '1B', '2B', '3B', 'SS', 'OF', 'OF', 'OF']
 
   lineup.forEach(function (value) {
     job.push(value.position)
   })
-  for (let i = 0; i < job.length; i++) {
-    if (job[i] === 'OF') {
-      OF.push(job[i])
-    }
-    if (job[i] === 'P') {
-      P.push(job[i])
-    }
-    if (job[i] === 'C') {
-      C.push(job[i])
-    }
-    if (job[i] === '1B') {
-      oneB.push(job[i])
-    }
-    if (job[i] === '2B') {
-      twoB.push(job[i])
-    }
-    if (job[i] === '3B') {
-      threeB.push(job[i])
-    }
-    if (job[i] === 'SS') {
-      SS.push(job[i])
-    }
-  }
-  if (OF.length === 3 && P.length === 1 && C.length === 1 && oneB.length === 1 && twoB.length === 1 && threeB.length === 1 && SS.length === 1) {
-    return true
-  } else {
+
+  const sortJob = job.sort((a, b) => a - b)
+  const sortJobExample = jobExample.sort((a, b) => a - b)
+
+  if (JSON.stringify(sortJob) !== JSON.stringify(sortJobExample)) {
     return false
+  } else {
+    return true
   }
 }
 
