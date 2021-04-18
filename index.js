@@ -10,6 +10,11 @@ const game = (lineup) => {
   let game = []
   let counter = 1
   let maxCounter = 1
+
+  lineup.forEach(function (value) {
+    game.push(value.gameId)
+  })
+
 }
 
 const playerPosition = (lineup) => {
