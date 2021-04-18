@@ -18,6 +18,11 @@ const game = (lineup) => {
 
   for (let i = 1; i < sortGame.length; i++) {
     if (sortGame[i - 1] === sortGame[i]) {
+      if (++counter > maxCounter) maxCounter = counter
+    } else {
+      counter = 1
+    }
+  }
 
 }
 
