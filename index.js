@@ -9,6 +9,13 @@ const validateLineup = (lineup) => {
 const playerPosition = (lineup) => {
   let job = []
   let OF = []
+  let P = []
+  let C = []
+  let oneB = []
+  let twoB = []
+  let threeB = []
+  let SS = []
+
 
   lineup.forEach(function (value) {
     job.push(value.position)
@@ -17,8 +24,26 @@ const playerPosition = (lineup) => {
     if (job[i] === 'OF') {
       OF.push(job[i])
     }
+    if (job[i] === 'P') {
+      P.push(job[i])
+    }
+    if (job[i] === 'C') {
+      C.push(job[i])
+    }
+    if (job[i] === '1B') {
+      oneB.push(job[i])
+    }
+    if (job[i] === '2B') {
+      twoB.push(job[i])
+    }
+    if (job[i] === '3B') {
+      threeB.push(job[i])
+    }
+    if (job[i] === 'SS') {
+      SS.push(job[i])
+    }
   }
-  if (OF.length === 3) {
+  if (OF.length === 3 && P.length === 1 && C.length === 1 && oneB.length === 1 && twoB.length === 1 && threeB.length === 1 && SS.length === 1) {
     return true
   } else {
     return false
