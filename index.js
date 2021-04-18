@@ -23,7 +23,11 @@ const game = (lineup) => {
       counter = 1
     }
   }
-
+  if (maxCounter > 3) {
+    return false
+  } else {
+    return true
+  }
 }
 
 const playerPosition = (lineup) => {
